@@ -1,5 +1,5 @@
 clear
-Point_Num = 10;
+Point_Num = 200;
 z_expd = 9;
 Point = zeros(Point_Num,3);
 rng('shuffle')
@@ -13,7 +13,7 @@ options.Algorithm = 'active-set';
 options.Display = 'iter-detailed';
 options.MaxFunctionEvaluations = inf;
 options.MaxIterations = inf;
-options.UseParallel = true;
+%options.UseParallel = true;
 Point = fmincon(@cal_s,Point,[],[],[],[],[],[],@mycon,options);
 
 function [c,ceq] = mycon(Point)

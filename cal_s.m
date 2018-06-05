@@ -1,6 +1,5 @@
 function S = cal_s(Point)
 
-Point = reshape(Point,[],3);
 DT = delaunayTriangulation(Point);
 [K,~] = convexHull(DT);
 trisurf(K,DT.Points(:,1),DT.Points(:,2),DT.Points(:,3))
