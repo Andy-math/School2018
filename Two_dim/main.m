@@ -18,10 +18,12 @@ options.Algorithm = 'active-set';
 options.Display = 'iter-detailed';
 options.MaxFunctionEvaluations = inf;
 options.MaxIterations = inf;
-options.UseParallel = true;
+options.UseParallel = false;
 Point = fmincon(@cal_s,Point,[],[],[],[],[],[],[],options);
 
+%{
 function [c,ceq] = mycon(Point)
     c = [];
     ceq = [];
 end
+%}
