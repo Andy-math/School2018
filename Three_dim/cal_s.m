@@ -3,6 +3,7 @@ function S = cal_s(Point)
 DT = delaunayTriangulation(Point);
 [K,~] = convexHull(DT);
 trisurf(K,DT.Points(:,1),DT.Points(:,2),DT.Points(:,3))
+drawnow
 
 [row,~] = size(K);
 convx_p = reshape(DT.Points(K,:),[],3,3);
